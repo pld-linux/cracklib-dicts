@@ -9,14 +9,13 @@ Summary(tr.UTF-8):	Standart sözlükler (/usr/share/dict/words)
 Summary(uk.UTF-8):	Стандартні словники CrackLib
 Name:		cracklib-dicts
 Version:	2.8.18
-Release:	2
+Release:	3
 License:	GPL v2
 Group:		Applications/System
 Source0:	http://downloads.sourceforge.net/cracklib/cracklib-words-20080507.gz
 # Source0-md5:	7fa6ba0cd50e7f9ccaf4707c810b14f1
 URL:		http://sourceforge.net/projects/cracklib/
-BuildRequires:	cracklib-devel
-BuildRequires:	cracklib-dicts
+BuildRequires:	cracklib-devel >= 2.8.18-2
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -64,7 +63,7 @@ sözlükler yaratılması için gerekli yardımcı programları içerir.
 %prep
 %setup -qcT
 install -d dicts
-ln -s %{SOURCE0}/*.gz dicts
+ln -s %{SOURCE0} dicts
 
 %build
 export PATH=/usr/sbin:$PATH
