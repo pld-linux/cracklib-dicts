@@ -39,8 +39,8 @@ standard, ainsi que les utilitaires nécessaires à la création de
 nouveaux dictionnaires.
 
 %description -l pl.UTF-8
-Pakiet zawiera słowniki crackliba dla standardowego
-/usr/share/dict/words oraz narzędzia do tworzenia nowych słowników.
+Pakiet zawiera słowniki crackliba, instalowane zwykle jako
+/usr/share/dict/words.
 
 %description -l pt_BR.UTF-8
 Inclui o dicionário cracklib para o padrão /usr/dict/words, bem como
