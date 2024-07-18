@@ -8,15 +8,15 @@ Summary(ru.UTF-8):	Стандартные словари CrackLib
 Summary(tr.UTF-8):	Standart sözlükler (/usr/share/dict/words)
 Summary(uk.UTF-8):	Стандартні словники CrackLib
 Name:		cracklib-dicts
-Version:	2.9.6
+Version:	2.10.0
 Release:	1
 License:	GPL v2
 Group:		Applications/System
 #Source0Download: https://github.com/cracklib/cracklib/releases
-Source0:	https://github.com/cracklib/cracklib/releases/download/cracklib-%{version}/cracklib-words-%{version}.gz
-# Source0-md5:	cae1257e3a9f95c917cc9dbbab852316
+Source0:	https://github.com/cracklib/cracklib/releases/download/v%{version}/cracklib-words-%{version}.bz2
+# Source0-md5:	94e9963e4786294f7fb0f2efd7618551
 URL:		https://github.com/cracklib/cracklib
-BuildRequires:	cracklib-devel >= 2.9.0
+BuildRequires:	cracklib-devel >= 2.10.0
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -69,7 +69,7 @@ ln -s %{SOURCE0} dicts
 %build
 export PATH=/usr/sbin:$PATH
 
-cracklib-format dicts/*.gz | cracklib-packer cracklib_dict
+bzip2 -dc dicts/*.bz2 | cracklib-format - | cracklib-packer cracklib_dict
 
 %install
 rm -rf $RPM_BUILD_ROOT
