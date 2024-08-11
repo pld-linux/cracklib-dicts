@@ -8,7 +8,7 @@ Summary(ru.UTF-8):	Стандартные словари CrackLib
 Summary(tr.UTF-8):	Standart sözlükler (/usr/share/dict/words)
 Summary(uk.UTF-8):	Стандартні словники CrackLib
 Name:		cracklib-dicts
-Version:	2.10.0
+Version:	2.10.2
 Release:	1
 License:	GPL v2
 Group:		Applications/System
